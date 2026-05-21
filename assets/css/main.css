@@ -6886,9 +6886,9 @@ input, select, textarea {
 			}
 
 				.gallery.style2 article .image img {
-					display: block;
 					width: 100%;
-					border-radius: 0;
+    				height: 100%;
+    				object-fit: cover;
 				}
 
 			.gallery.style2 article .caption {
@@ -7107,7 +7107,7 @@ input, select, textarea {
 		height: 100%;
 		outline: 0;
 		background-color: rgba(0, 0, 0, 0.75);
-		visibility: none;
+		visibility: hidden;
 		opacity: 0;
 		z-index: 0;
 	}
@@ -7184,6 +7184,10 @@ input, select, textarea {
 			.gallery.lightbox .modal.visible:before {
 				opacity: 1;
 			}
+
+		.gallery.lightbox .modal.visible .inner {
+			opacity: 1;
+		}
 
 		.gallery.lightbox .modal.loaded .inner {
 			-moz-transform: translateY(0);
